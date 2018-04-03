@@ -1,10 +1,16 @@
 <template>
-  <div>首页</div>
+  <div class="overview">
+    <IHeader></IHeader>
+  </div>
 </template>
 
 <script>
+import IHeader from './../../components/iHeader';
+
 export default {
-  name: 'index',
+  components: {
+    IHeader,
+  },
 };
 </script>
 
