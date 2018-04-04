@@ -2,12 +2,18 @@
   <div class="overview">
     <IHeader></IHeader>
     <div class="common-width">
-      <ProPannel :title="item.title" v-for="(item, index) in dataList" :key="index"></ProPannel>
+      <ProPannel
+        :title="lipstickData.title"
+        :list="lipstickData.list"></ProPannel>
+      <ProPannel
+        :title="lipstickData.title"
+        :list="lipstickData.list"></ProPannel>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import IHeader from './../../components/iHeader';
 import ProPannel from './../../components/pro-pannel';
 
@@ -16,23 +22,10 @@ export default {
     IHeader,
     ProPannel,
   },
-  data() {
-    return {
-      dataList: [
-        {
-          title: '美丽人生 口红',
-        },
-        {
-          title: '女鞋',
-        },
-        {
-          title: '女鞋',
-        },
-        {
-          title: '女鞋',
-        },
-      ],
-    };
+  computed: {
+    ...mapState({
+      lipstickData: state => state.prolist.lipstickData,
+    }),
   },
 };
 </script>
