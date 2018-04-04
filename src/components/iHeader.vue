@@ -28,6 +28,7 @@ export default {
 <style lang="less">
   @import './../assets/css/base';
   .i-header {
+    background: #fff;
     position: relative;
     border-bottom: @border-red;
     .common-width {
@@ -67,6 +68,7 @@ export default {
       color: #fff;
       button {
         font-size: 16px;
+        letter-spacing: 5px;
       }
     }
   }
