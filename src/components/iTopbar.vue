@@ -8,7 +8,13 @@
       <div class="right">
         <ul class="clearfix">
           <li class="top-li">
-            <div class="cart"><Icon type="ios-cart" class="icon"></Icon>购物车&nbsp;<span class="no-cart">0</span>&nbsp;件</div>
+            <div class="cart">
+              <Icon type="ios-cart" class="icon"></Icon>
+              购物车&nbsp;
+              <span class="no-cart" v-if="carDataNumber === 0">{{ carDataNumber }}</span>
+              <span class="has-cart" v-else>{{ carDataNumber }}</span>
+              &nbsp;件
+            </div>
           </li>
         </ul>
       </div>
@@ -17,7 +23,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
+  computed: {
+    ...mapState({
+      carDataNumber: state => state.cart.carDataNumber,
+    }),
+  },
 };
 </script>
 
@@ -52,6 +65,10 @@ export default {
             }
             .no-cart {
               color: #333;
+            }
+            .has-cart {
+              color: red;
+              font-weight: bolder;
             }
           }
           &:hover {

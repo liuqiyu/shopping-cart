@@ -2,12 +2,7 @@
   <div class="overview">
     <IHeader></IHeader>
     <div class="common-width">
-      <ProPannel
-        :title="lipstickData.title"
-        :list="lipstickData.list"></ProPannel>
-      <ProPannel
-        :title="lipstickData.title"
-        :list="lipstickData.list"></ProPannel>
+      <ProPannel :data="lipstickData"></ProPannel>
     </div>
   </div>
 </template>

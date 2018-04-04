@@ -19,6 +19,7 @@ export default {
   },
   created() {
     this.getInnerWidth();
+    this.defaultCart();
   },
   computed: {
     innerHeight() {
@@ -28,6 +29,7 @@ export default {
   methods: {
     ...mapActions([
       'getInnerWidth',
+      'defaultCart',
     ]),
   },
 };
