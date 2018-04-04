@@ -6,8 +6,8 @@
         <p>美丽生活 这里开始</p>
       </div>
       <div class="i-search-wrapper">
-        <i-input size="large" v-model="keyword">
-          <Button slot="append" icon="ios-search"></Button>
+        <i-input size="large" v-model="keyword" class="m-input">
+          <Button slot="append">搜索</Button>
         </i-input>
       </div>
     </div>
@@ -41,8 +41,8 @@ export default {
         text-align: center;
         span {
           font-size: 38px;
-          font-family: '幼圆';
-          font-weight: bold;
+          font-family: 'main-title';
+          font-weight: bolder;
           color: @main-color;
         }
         p {
@@ -58,5 +58,25 @@ export default {
     width: 600px;
     margin: 0 auto;
     padding: 45px 0;
+    .ivu-input-group-append {
+      height: 38px !important;
+      border-radius: 0 !important;
+      padding: 6px 20px !important;
+      background: @main-color;
+      border: none;
+      color: #fff;
+      button {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .m-input {
+    border: @border-red;
+    input {
+      height: 38px !important;
+      border-radius: 0 !important;
+      border: none;
+    }
   }
 </style>

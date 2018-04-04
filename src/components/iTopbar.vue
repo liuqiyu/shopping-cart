@@ -26,10 +26,9 @@ export default {
       .left {
         float: left;
         line-height: 40px;
-        font-size: 14px;
+        font-size: 12px;
         span.please-login {
           margin-left: 20px;
-          text-decoration: underline;
           cursor: pointer;
         }
       }
