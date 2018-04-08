@@ -18,6 +18,7 @@
     <div class="common-width">
       <ProPannel :data="lipstickData"></ProPannel>
       <ProPannel :data="femaleBagData"></ProPannel>
+      <ProPannel :data="highHeeledData"></ProPannel>
     </div>
   </div>
 </template>
@@ -43,6 +44,7 @@ export default {
     ...mapState({
       lipstickData: state => state.prolist.lipstickData,
       femaleBagData: state => state.prolist.femaleBagData,
+      highHeeledData: state => state.prolist.highHeeledData,
     }),
   },
 };
