@@ -15,7 +15,7 @@
             <img v-lazy="item.url" :alt="item.name">
           </div>
           <div class="description">
-            <p class="describe">{{item.brandName}}{{item.type}}{{item.tags}}</p>
+            <p class="describe">{{item.brandName}} {{item.title}} {{item.tags}}</p>
             <p class="price">￥{{item.price}}</p>
           </div>
         </div>
@@ -60,11 +60,11 @@ export default {
           position: absolute;
           left: 0;
           top: 50%;
-          margin-top: -10px;
+          margin-top: -9px;
           display: block;
           content: '';
-          width: 6px;
-          height: 20px;
+          width: 5px;
+          height: 18px;
           background: red;
         }
       }
@@ -74,7 +74,7 @@ export default {
       height: 594px;
       overflow: hidden;
       .big-banner {
-        width: 244px;
+        width: 228px;
         height: 100%;
         float: left;
         background: #e1e1e1;
@@ -88,16 +88,16 @@ export default {
         }
       }
       .column {
-        width: 956px;
+        width: 972px;
         float: left;
         .column-item {
-          width: 225px;
+          width: 228px;
           height: 290px;
           border: 1px solid #fff;
           padding: 5px;
           margin-bottom: 14px;
           float: left;
-          margin-left: 14px;
+          margin-left: 15px;
           background: #fff;
           // 鼠标进过商品小图时的效果
           &:hover {

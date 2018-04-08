@@ -3,16 +3,30 @@ import { SET_CART } from './mutation-types';
 // 默认的购物车产品
 const defaultCart = ({ commit }) => {
   let cartData = [];
+  let typeArr = [];
+  let arr = {};
   if (sessionStorage.getItem('cartData')) {
     cartData = JSON.parse(sessionStorage.getItem('cartData'));
+    typeArr = cartData.map((item) => item.type)
+    typeArr = new Set(typeArr);
+    typeArr.forEach((item) => {
+      arr[item] = [];
+      cartData.forEach((cell) => {
+        if (cell.type === item) {
+          arr[item].push(cell);
+        }
+      });
+    })
+    console.log(arr)
   }
   commit(SET_CART, cartData);
 };
 
 // 加入购物车
-const addCart = ({ commit }, value) => {
+const addCart = ({ commit }, val) => {
   let cartData = [];
   const arrId = [];
+  const value = val;
   if (sessionStorage.getItem('cartData')) {
     // 购物车原本就有商品
     cartData = JSON.parse(sessionStorage.getItem('cartData'));

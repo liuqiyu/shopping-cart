@@ -3,3 +3,4 @@
 /dist/
 /*.js
 /src/router/*.js
+/src/utils/*.js
