@@ -158,7 +158,7 @@ const state = {
   },
   highHeeledData: {
     title: '美丽人生 高跟鞋',
-    bannerUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/big-banner/lipstick.jpg',
+    bannerUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/big-banner/high-heeled.jpg',
     list: [
       {
         id: '21',
