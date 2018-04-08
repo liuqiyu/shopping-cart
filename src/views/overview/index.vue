@@ -19,6 +19,7 @@
       <ProPannel :data="lipstickData"></ProPannel>
       <ProPannel :data="femaleBagData"></ProPannel>
       <ProPannel :data="highHeeledData"></ProPannel>
+      <ProPannel :data="weddingDressData"></ProPannel>
     </div>
   </div>
 </template>
@@ -45,6 +46,7 @@ export default {
       lipstickData: state => state.prolist.lipstickData,
       femaleBagData: state => state.prolist.femaleBagData,
       highHeeledData: state => state.prolist.highHeeledData,
+      weddingDressData: state => state.prolist.weddingDressData,
     }),
   },
 };
