@@ -80,7 +80,7 @@ const state = {
   },
   femaleBagData: {
     title: '美丽人生 女包',
-    bannerUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/big-banner/lipstick.jpg',
+    bannerUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/big-banner/female-bag.jpg',
     list: [
       {
         id: '11',
@@ -236,7 +236,7 @@ const state = {
   },
   weddingDressData: {
     title: '美丽人生 婚纱',
-    bannerUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/big-banner/lipstick.jpg',
+    bannerUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/big-banner/wedding-dress.jpg',
     list: [
       {
         id: '31',
@@ -314,7 +314,7 @@ const state = {
   },
   necklaceData: {
     title: '美丽人生 项链',
-    bannerUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/big-banner/lipstick.jpg',
+    bannerUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/big-banner/necklace.jpg',
     list: [
       {
         id: '41',

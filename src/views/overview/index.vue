@@ -9,9 +9,9 @@
         <div class="areas clearfix">
           <div class="area-item" style="background: #cbe5f8">口红</div>
           <div class="area-item" style="background: #ffdadd">女包</div>
-          <div class="area-item" style="background: #caecf7">鞋子</div>
-          <div class="area-item" style="background: #d0defb">眼镜</div>
-          <div class="area-item" style="background: #ffefae">婚纱</div>
+          <div class="area-item" style="background: #caecf7">高跟鞋</div>
+          <div class="area-item" style="background: #d0defb">婚纱</div>
+          <div class="area-item" style="background: #ffefae">项链</div>
         </div>
       </div>
     </div>
@@ -19,7 +19,6 @@
       <ProPannel :data="lipstickData"></ProPannel>
       <ProPannel :data="femaleBagData"></ProPannel>
       <ProPannel :data="highHeeledData"></ProPannel>
-      <ProPannel :data="weddingDressData"></ProPannel>
       <ProPannel :data="weddingDressData"></ProPannel>
       <ProPannel :data="necklaceData"></ProPannel>
     </div>
