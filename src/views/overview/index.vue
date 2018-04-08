@@ -1,22 +1,6 @@
 <template>
   <div class="overview">
     <IHeader></IHeader>
-    <!--<div class="banner">-->
-      <!--<Carousel autoplay v-model="value2" loop :height="height" :arrow="arrow">-->
-        <!--<CarouselItem>-->
-          <!--<div class="demo-carousel">1</div>-->
-        <!--</CarouselItem>-->
-        <!--<CarouselItem>-->
-          <!--<div class="demo-carousel">2</div>-->
-        <!--</CarouselItem>-->
-        <!--<CarouselItem>-->
-          <!--<div class="demo-carousel">3</div>-->
-        <!--</CarouselItem>-->
-        <!--<CarouselItem>-->
-          <!--<div class="demo-carousel">4</div>-->
-        <!--</CarouselItem>-->
-      <!--</Carousel>-->
-    <!--</div>-->
     <div class="i-area">
       <div class="common-width">
         <header class="area-header">
@@ -33,7 +17,7 @@
     </div>
     <div class="common-width">
       <ProPannel :data="lipstickData"></ProPannel>
-      <ProPannel :data="lipstickData"></ProPannel>
+      <ProPannel :data="femaleBagData"></ProPannel>
     </div>
   </div>
 </template>
@@ -58,6 +42,7 @@ export default {
   computed: {
     ...mapState({
       lipstickData: state => state.prolist.lipstickData,
+      femaleBagData: state => state.prolist.femaleBagData,
     }),
   },
 };

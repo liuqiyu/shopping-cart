@@ -12,23 +12,25 @@
       </div>
       <div class="i-cart-list-wrap">
         <div class="i-cart-list-row">
-          <div class="i-cart-list-cell">
+          <div class="i-cart-list-cell" v-for="(item, index) in cartData" :key="index">
             <div class="i-cell-header">
-              <div class="left-h">口红</div>
-              <div class="right-h">￥3100</div>
+              <div class="left-h">{{ item.type }}</div>
+              <div class="right-h">￥{{ item.rowPrice }}</div>
             </div>
             <div class="i-cell-list">
-              <div class="i-cell-list-item">
-                <div class="i-img"></div>
+              <div class="i-cell-list-item" v-for="(cell, key) in item.data" :key="key">
+                <div class="i-img">
+                  <img :src="cell.url" alt="">
+                </div>
                 <div class="i-desc">
-                  <p>321321321321</p>
-                  <p>312312312312</p>
+                  <p>{{ cell.brandName }}</p>
+                  <p>{{ cell.title }}</p>
                 </div>
                 <div class="i-number">
-                  32
+                  x {{cell.number}}
                 </div>
                 <div class="i-price">
-                  ￥520011111
+                  ￥{{ cell.cellPrice }}
                 </div>
               </div>
             </div>
@@ -37,8 +39,8 @@
       </div>
       <div class="i-cart-settlement">
         <p class="settlement-header">
-          <span>已选 <b>8</b> 件</span>
-          <span class="price">￥208222.00</span>
+          <span>共 <b>{{ carDataNumber }}</b> 件</span>
+          <span class="price">￥{{ totalPrice }}</span>
         </p>
         <div class="settlement-btn">结算 <Icon type="ios-arrow-forward"></Icon></div>
       </div>
@@ -47,11 +49,19 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import { hasClass } from './../utils/utils';
 
 export default {
   props: {
     innerHeight: null,
+  },
+  computed: {
+    ...mapState({
+      cartData: state => state.cart.cartData,
+      carDataNumber: state => state.cart.carDataNumber,
+      totalPrice: state => state.cart.totalPrice,
+    }),
   },
   methods: {
     // Mini版购物车的控制
@@ -128,11 +138,15 @@ export default {
       }
       .i-cart-list-wrap {
         padding: 29px 0 85px 0;
-        overflow-y: auto;
+        height: 100%;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         visibility: visible;
+        overflow-y: auto;
         .i-cart-list-row {
           .i-cart-list-cell {
+            &:last-child {
+              margin-bottom: 0;
+            }
             background: #fff;
             padding: 0 10px;
             margin-bottom: 15px;
@@ -176,7 +190,7 @@ export default {
                 }
                 .i-number {
                   overflow: hidden;
-                  width: 60px;
+                  width: 55px;
                   float: left;
                   line-height: 50px;
                   text-align: center;
@@ -239,21 +253,15 @@ export default {
   }
 
   // 浏览器滚动条样式
-  .i-cart-list::-webkit-scrollbar,
-  .i-cart-list::-webkit-scrollbar,
-  .i-cart-list::-webkit-scrollbar {
+  .i-cart-list-wrap::-webkit-scrollbar {
     width: 5px;
   }
-  .i-cart-list::-webkit-scrollbar-thumb,
-  .i-cart-list::-webkit-scrollbar-thumb,
-  .i-cart-list::-webkit-scrollbar-thumb {
+  .i-cart-list-wrap::-webkit-scrollbar-thumb {
     -webkit-border-radius: 6px;
     border-radius: 6px;
     background: #616161;
   }
-  .i-cart-list::-webkit-scrollbar-track,
-  .i-cart-list::-webkit-scrollbar-track,
-  .i-cart-listmbarp-favor-detail-bd::-webkit-scrollbar-track {
+  .i-cart-list-wrap::-webkit-scrollbar-track {
     -webkit-border-radius: 6px;
     border-radius: 6px;
     background-color: transparent;

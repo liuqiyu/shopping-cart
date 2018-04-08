@@ -4,3 +4,4 @@
 /*.js
 /src/router/*.js
 /src/utils/*.js
+/src/utils/data/cart.js

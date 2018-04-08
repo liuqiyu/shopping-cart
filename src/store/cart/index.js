@@ -4,6 +4,7 @@ import actions from './actions';
 const state = {
   cartData: [],
   carDataNumber: 0,
+  totalPrice: 0,
 };
 
 export default {

@@ -1,29 +1,14 @@
 import { SET_CART } from './mutation-types';
+import setClassCart from './../../utils/data/cart';
 
 // 默认的购物车产品
-const defaultCart = ({ commit }) => {
-  let cartData = [];
-  let typeArr = [];
-  let arr = {};
-  if (sessionStorage.getItem('cartData')) {
-    cartData = JSON.parse(sessionStorage.getItem('cartData'));
-    typeArr = cartData.map((item) => item.type)
-    typeArr = new Set(typeArr);
-    typeArr.forEach((item) => {
-      arr[item] = [];
-      cartData.forEach((cell) => {
-        if (cell.type === item) {
-          arr[item].push(cell);
-        }
-      });
-    })
-    console.log(arr)
-  }
+const defaultCart = async ({ commit }) => {
+  const cartData = await setClassCart();
   commit(SET_CART, cartData);
 };
 
 // 加入购物车
-const addCart = ({ commit }, val) => {
+const addCart = async ({ commit }, val) => {
   let cartData = [];
   const arrId = [];
   const value = val;
@@ -49,7 +34,8 @@ const addCart = ({ commit }, val) => {
     cartData[0].number = 1;
     sessionStorage.setItem('cartData', JSON.stringify(cartData));
   }
-  commit(SET_CART, cartData);
+  const data = await setClassCart();
+  commit(SET_CART, data);
 };
 
 // 移除购物车
