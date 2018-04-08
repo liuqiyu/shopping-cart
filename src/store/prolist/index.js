@@ -390,7 +390,6 @@ const state = {
       },
     ],
   },
-  
 };
 
 export default {
