@@ -12,6 +12,10 @@ Belle go是一个电商网站【声明：部分功能仿照天猫】。前端采
   * 加入购物车
   * 删除商品
   
+### 技术栈
+
+`vue2` `vue-router` `vuex` `es6` `webpack` `iview`
+
 ### 文件结构
 
 shopping-cart
