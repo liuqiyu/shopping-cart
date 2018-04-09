@@ -14,7 +14,11 @@ Belle go是一个电商网站【声明：部分功能仿照天猫】。前端采
   
 ### 技术栈
 
-`vue2` `vue-router` `vuex` `es6` `webpack` `iview`
+`vue2` `vue-router` `vuex` `es6` `webpack` `iview` `less`
+
+### 规范
+
+* ESLint Airbnb ES6 base
 
 ### 文件结构
 
