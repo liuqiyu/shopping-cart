@@ -41,3 +41,11 @@ shopping-cart
     ├── images
 
 ```
+
+### 浏览地址
+
+[预览](https://liuqiyu.github.io/shopping-cart/dist/#/)
+
+### License
+
+MIT
