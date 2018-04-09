@@ -27,14 +27,30 @@
                   <p>{{ cell.title }}</p>
                 </div>
                 <div class="i-number">
-                  x {{cell.number}}
+                  <span class="reduce" v-if="cell.number > 1" @click="reduceCart(cell)">
+                    <Icon type="android-remove-circle"></Icon>
+                  </span>
+                  <span class="reduce-disabled" v-else>
+                    <Icon type="android-remove-circle"></Icon>
+                  </span>
+                  <span class="number">{{cell.number}}</span>
+                  <span class="add" @click="addCart(cell)">
+                    <Icon type="android-add-circle"></Icon>
+                  </span>
                 </div>
                 <div class="i-price">
                   ￥{{ cell.cellPrice }}
                 </div>
+                <div class="i-delete" @click="deleteCart(cell)"><Icon type="trash-a"></Icon></div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="no-cart-data" v-if="cartData.length <= 0">
+          <div class="img">
+            <img src="./../assets/images/no-cart-data.png" alt="">
+          </div>
+          <p>购物车为空~</p>
         </div>
       </div>
       <div class="i-cart-settlement">
@@ -42,14 +58,19 @@
           <span>共 <b>{{ carDataNumber }}</b> 件</span>
           <span class="price">￥{{ totalPrice }}</span>
         </p>
-        <div class="settlement-btn">结算 <Icon type="ios-arrow-forward"></Icon></div>
+        <div class="settlement-btn" v-if="cartData.length > 0">
+          结算 <Icon type="ios-arrow-forward"></Icon>
+        </div>
+        <div class="settlement-btn" style="background: #999" v-else>
+          结算 <Icon type="ios-arrow-forward"></Icon>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 import { hasClass } from './../utils/utils';
 
 export default {
@@ -64,6 +85,11 @@ export default {
     }),
   },
   methods: {
+    ...mapActions([
+      'addCart',
+      'reduceCart',
+      'deleteCart',
+    ]),
     // Mini版购物车的控制
     controlCart() {
       const toolbar = document.querySelector('.i-global-toolbar');
@@ -81,9 +107,9 @@ export default {
   @import './../assets/css/base';
   .i-global-toolbar {
     position: fixed;
-    right: -250px;
+    right: -280px;
     top: 0;
-    width: 285px;
+    width: 315px;
     height: 400PX;
     background: #e6e6e6;
     z-index: 8888;
@@ -124,7 +150,7 @@ export default {
     .i-cart-wrap {
       position: relative;
       float: left;
-      width: 250px;
+      width: 280px;
       height: 100%;
       .i-cart-top {
         position: absolute;
@@ -165,6 +191,7 @@ export default {
             .i-cell-list {
               width: 100%;
               .i-cell-list-item {
+                position: relative;
                 padding: 5px 0;
                 overflow: hidden;
                 .i-img {
@@ -180,7 +207,7 @@ export default {
                 }
                 .i-desc {
                   overflow: hidden;
-                  width: 60px;
+                  width: 80px;
                   float: left;
                   margin-left: 5px;
                   p {
@@ -190,19 +217,81 @@ export default {
                 }
                 .i-number {
                   overflow: hidden;
-                  width: 55px;
+                  width: 65px;
                   float: left;
                   line-height: 50px;
                   text-align: center;
+                  .reduce, .add, .reduce-disabled {
+                    visibility: hidden;
+                    font-size: 20px;
+                    cursor: pointer;
+                    color: rgba(0,0,0,.3);
+                  }
+                  .reduce {
+                    &:hover {
+                      color: rgba(0,0,0,.6);
+                    }
+                  }
+                  .add {
+                    &:hover {
+                      color: rgba(0,0,0,.6);
+                    }
+                  }
+                  .reduce-disabled {
+                    color: rgba(0,0,0,.1);
+                  }
+                  .number {
+                    padding: 0 3px;
+                    vertical-align: top;
+                  }
                 }
                 .i-price {
                   overflow: hidden;
+                  text-align: right;
                   width: 55px;
                   float: right;
                   line-height: 50px;
                 }
+                .i-delete {
+                  position: absolute;
+                  visibility: hidden;
+                  right: 0;
+                  top: -3px;
+                  cursor: pointer;
+                  font-size: 18px;
+                  color: rgba(0,0,0,.3);
+                  &:hover {
+                    color: rgba(0,0,0,.8);
+                  }
+                }
+                &:hover .i-number {
+                  .reduce, .add, .reduce-disabled{
+                    visibility: visible;
+                  }
+                }
+                &:hover .i-delete {
+                  visibility: visible;
+                }
               }
             }
+          }
+        }
+        // 购物车为空
+        .no-cart-data {
+          width: 100%;
+          padding-top: 40px;
+          text-align: center;
+          .img {
+            width: 100px;
+            margin: 0 auto;
+            img {
+              width: 100%;
+            }
+          }
+          p {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #777;
           }
         }
       }

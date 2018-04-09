@@ -38,13 +38,38 @@ const addCart = async ({ commit }, val) => {
   commit(SET_CART, data);
 };
 
+// 减少购物车
+const reduceCart = async ({ commit }, value) => {
+  const cartData = JSON.parse(sessionStorage.getItem('cartData'));
+  cartData.forEach((item, index) => {
+    // 商品id相同，直接减少数量
+    if (item.id === value.id) {
+      cartData[index].number -= 1;
+    }
+  });
+  sessionStorage.setItem('cartData', JSON.stringify(cartData));
+  const data = await setClassCart();
+  commit(SET_CART, data);
+};
+
 // 移除购物车
-const deleteCart = ({ commit }, value) => {
-  commit(SET_CART, value);
+const deleteCart = async ({ commit }, value) => {
+  const arr = [];
+  const cartData = JSON.parse(sessionStorage.getItem('cartData'));
+  cartData.forEach((item) => {
+    // 商品id相同，直接减少数量
+    if (item.id !== value.id) {
+      arr.push(item);
+    }
+  });
+  sessionStorage.setItem('cartData', JSON.stringify(arr));
+  const data = await setClassCart();
+  commit(SET_CART, data);
 };
 
 export default {
   addCart,
+  reduceCart,
   deleteCart,
   defaultCart,
 };
