@@ -1,6 +1,22 @@
 <template>
   <div class="overview">
     <IHeader></IHeader>
+    <div class="banner">
+      <iCarousel :bannerData="mainBanner"></iCarousel>
+      <!--<Carousel-->
+          <!--autoplay-->
+          <!--v-model="bannerValue"-->
+          <!--loop-->
+          <!--:height="height"-->
+          <!--:arrow="arrow"-->
+          <!--:autoplay-speed="5000">-->
+        <!--<CarouselItem v-for="(item, key) in mainBanner" :key="key">-->
+          <!--<div class="carousel-item">-->
+            <!--<img :src="item.imageUrl" alt="">-->
+          <!--</div>-->
+        <!--</CarouselItem>-->
+      <!--</Carousel>-->
+    </div>
     <div class="i-area">
       <div class="common-width">
         <header class="area-header">
@@ -16,13 +32,6 @@
       </div>
     </div>
     <ProPannel :data="proList"></ProPannel>
-    <!--<div class="pro-list">-->
-      <!--&lt;!&ndash;<ProPannel :data="lipstickData"></ProPannel>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ProPannel :data="femaleBagData"></ProPannel>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ProPannel :data="highHeeledData"></ProPannel>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ProPannel :data="weddingDressData"></ProPannel>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ProPannel :data="necklaceData"></ProPannel>&ndash;&gt;-->
-    <!--</div>-->
   </div>
 </template>
 
@@ -30,27 +39,25 @@
 import { mapState } from 'vuex';
 import IHeader from './../../components/iHeader';
 import ProPannel from './../../components/pro-pannel';
+import iCarousel from './../../components/iCarousel';
 
 export default {
   data() {
     return {
-      value2: 0,
-      height: 400,
+      bannerValue: 0,
+      height: 500,
       arrow: 'never',
     };
   },
   components: {
     IHeader,
     ProPannel,
+    iCarousel,
   },
   computed: {
     ...mapState({
       proList: state => state.prolist.proList,
-      // lipstickData: state => state.prolist.lipstickData,
-      // femaleBagData: state => state.prolist.femaleBagData,
-      // highHeeledData: state => state.prolist.highHeeledData,
-      // weddingDressData: state => state.prolist.weddingDressData,
-      // necklaceData: state => state.prolist.necklaceData,
+      mainBanner: state => state.prolist.mainBanner,
     }),
   },
 };
