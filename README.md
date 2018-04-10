@@ -63,6 +63,18 @@ shopping-cart
 
 [预览](https://liuqiyu.github.io/shopping-cart/dist/#/)
 
+## 安装使用
+
+```
+git clone https://github.com/liuqiyu/shopping-cart.git
+
+cd shopping-cart
+
+npm install
+
+npm run dev
+```
+
 ## License
 
 [MIT](https://github.com/liuqiyu/shopping-cart/blob/master/LICENSE)
