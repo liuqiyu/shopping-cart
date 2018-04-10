@@ -62,4 +62,5 @@ shopping-cart
 
 ### License
 
-MIT
+[MIT](https://github.com/liuqiyu/shopping-cart/blob/master/LICENSE)
+
