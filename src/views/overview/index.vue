@@ -2,20 +2,7 @@
   <div class="overview">
     <IHeader></IHeader>
     <div class="banner">
-      <iCarousel :bannerData="mainBanner"></iCarousel>
-      <!--<Carousel-->
-          <!--autoplay-->
-          <!--v-model="bannerValue"-->
-          <!--loop-->
-          <!--:height="height"-->
-          <!--:arrow="arrow"-->
-          <!--:autoplay-speed="5000">-->
-        <!--<CarouselItem v-for="(item, key) in mainBanner" :key="key">-->
-          <!--<div class="carousel-item">-->
-            <!--<img :src="item.imageUrl" alt="">-->
-          <!--</div>-->
-        <!--</CarouselItem>-->
-      <!--</Carousel>-->
+      <iCarousel :bannerData="mainBanner" :height="500"></iCarousel>
     </div>
     <div class="i-area">
       <div class="common-width">
@@ -42,13 +29,6 @@ import ProPannel from './../../components/pro-pannel';
 import iCarousel from './../../components/iCarousel';
 
 export default {
-  data() {
-    return {
-      bannerValue: 0,
-      height: 500,
-      arrow: 'never',
-    };
-  },
   components: {
     IHeader,
     ProPannel,

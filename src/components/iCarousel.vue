@@ -1,14 +1,13 @@
 <template>
   <Carousel
     :autoplay="autoplay"
-    v-model="bannerValue"
     :loop="loop"
     :height="height"
     :arrow="arrow"
     :autoplay-speed="speed">
     <CarouselItem v-for="(item, key) in bannerData" :key="key">
       <div class="carousel-item">
-        <img :src="item.imageUrl" alt="">
+        <img :src="item.imageUrl" alt="" width="1920">
       </div>
     </CarouselItem>
   </Carousel>
@@ -24,7 +23,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    bannerValue: 0,
     loop: {
       type: Boolean,
       default: false,
@@ -36,7 +34,7 @@ export default {
     },
     speed: {
       type: Number,
-      default: 2000,
+      default: 3000,
     },
   },
 };
@@ -45,6 +43,7 @@ export default {
 <style lang="less" scoped>
   .carousel-item {
     width: 100%;
+    overflow: hidden;
     img {
       vertical-align: top;
     }
