@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/blog/logo.png/>
+  <img src="https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/blog/logo.png"/>
 </p>
 
 
