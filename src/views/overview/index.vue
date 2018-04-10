@@ -1,9 +1,10 @@
 <template>
   <div class="overview">
+    <!-- 标题 + 搜索栏 -->
     <IHeader></IHeader>
-    <div class="banner">
-      <iCarousel :bannerData="mainBanner" :height="500"></iCarousel>
-    </div>
+    <!-- banner滚动 -->
+    <iCarousel :bannerData="mainBanner" :height="500"></iCarousel>
+    <!-- 分类 -->
     <div class="i-area">
       <div class="common-width">
         <header class="area-header">
@@ -18,7 +19,10 @@
         </div>
       </div>
     </div>
+    <!-- 商品列表 -->
     <ProPannel :data="proList"></ProPannel>
+    <!-- 底部 -->
+    <iFooter></iFooter>
   </div>
 </template>
 
@@ -27,12 +31,14 @@ import { mapState } from 'vuex';
 import IHeader from './../../components/iHeader';
 import ProPannel from './../../components/pro-pannel';
 import iCarousel from './../../components/iCarousel';
+import iFooter from './../../components/iFooter';
 
 export default {
   components: {
     IHeader,
     ProPannel,
     iCarousel,
+    iFooter,
   },
   computed: {
     ...mapState({

@@ -10,13 +10,12 @@ import './my-theme/index.less';
 import './assets/font/iconfont.css';
 
 Vue.use(iView);
-Vue.use(VueLazyload);
 
 // or with options
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  // error: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-small/carslan.jpg',
-  // loading: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-small/carslan.jpg',
+  error: './static/404.png',
+  // loading: require('./assets/images/no-cart-data.png'),
   attempt: 1,
 });
 
