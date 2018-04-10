@@ -3,27 +3,27 @@
 </p>
 
 
-### 前言
+## 前言
 
 Belle go是一个电商网站【声明：部分功能仿照天猫】。前端采用vue为基础搭建的框架。
 
 
-### 功能实现
+###功能实现
 
 * 首页
 * mini购物车
   * 加入购物车
   * 删除商品
   
-### 技术栈
+## 技术栈
 
 `vue2` `vue-router` `vuex` `es6` `webpack` `iview` `less`
 
-### 规范
+## 规范
 
 * ESLint Airbnb ES6 base
 
-### 文件结构
+## 文件结构
 
 shopping-cart
 
@@ -53,7 +53,7 @@ shopping-cart
 
 ```
 
-### 浏览
+## 浏览
 
 * 效果 [录制工具-- ScreenToGif]
 
@@ -63,7 +63,7 @@ shopping-cart
 
 [预览](https://liuqiyu.github.io/shopping-cart/dist/#/)
 
-### License
+## License
 
 [MIT](https://github.com/liuqiyu/shopping-cart/blob/master/LICENSE)
 
