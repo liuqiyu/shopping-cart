@@ -1,27 +1,29 @@
 <template>
-  <section class="pro-pannel">
-    <header>
-      <p class="title">{{data.title}}</p>
-    </header>
-    <div class="pro-body clearfix">
-      <div class="big-banner">
-        <img :src="data.bannerUrl" alt="">
-      </div>
-      <div class="column clearfix">
-        <div class="column-item"
-             v-for="(item, index) in data.list"
-             :key="index" @click="addCart(item)">
-          <div class="img">
-            <img v-lazy="item.url" :alt="item.name">
-          </div>
-          <div class="description">
-            <p class="describe">{{item.brandName}} {{item.title}} {{item.tags}}</p>
-            <p class="price">￥{{item.price}}</p>
+  <div class="common-width">
+    <section class="pro-pannel" v-for="(item, index) in data" :key="index">
+      <header>
+        <p class="title">{{item.title}}</p>
+      </header>
+      <div class="pro-body clearfix">
+        <div class="big-banner">
+          <img :src="item.bannerUrl" alt="">
+        </div>
+        <div class="column clearfix">
+          <div class="column-item"
+               v-for="(cell, key) in item.list"
+               :key="key" @click="addCart(cell)">
+            <div class="img">
+              <img v-lazy="cell.url" :alt="cell.name">
+            </div>
+            <div class="description">
+              <p class="describe">{{cell.brandName}} {{cell.title}} {{cell.tags}}</p>
+              <p class="price">￥{{cell.price}}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -30,7 +32,7 @@ import { mapActions } from 'vuex';
 export default {
   props: {
     data: {
-      type: Object,
+      type: Array,
     },
   },
   methods: {

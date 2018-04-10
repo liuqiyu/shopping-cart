@@ -15,13 +15,14 @@
         </div>
       </div>
     </div>
-    <div class="common-width">
-      <ProPannel :data="lipstickData"></ProPannel>
-      <ProPannel :data="femaleBagData"></ProPannel>
-      <ProPannel :data="highHeeledData"></ProPannel>
-      <ProPannel :data="weddingDressData"></ProPannel>
-      <ProPannel :data="necklaceData"></ProPannel>
-    </div>
+    <ProPannel :data="proList"></ProPannel>
+    <!--<div class="pro-list">-->
+      <!--&lt;!&ndash;<ProPannel :data="lipstickData"></ProPannel>&ndash;&gt;-->
+      <!--&lt;!&ndash;<ProPannel :data="femaleBagData"></ProPannel>&ndash;&gt;-->
+      <!--&lt;!&ndash;<ProPannel :data="highHeeledData"></ProPannel>&ndash;&gt;-->
+      <!--&lt;!&ndash;<ProPannel :data="weddingDressData"></ProPannel>&ndash;&gt;-->
+      <!--&lt;!&ndash;<ProPannel :data="necklaceData"></ProPannel>&ndash;&gt;-->
+    <!--</div>-->
   </div>
 </template>
 
@@ -44,11 +45,12 @@ export default {
   },
   computed: {
     ...mapState({
-      lipstickData: state => state.prolist.lipstickData,
-      femaleBagData: state => state.prolist.femaleBagData,
-      highHeeledData: state => state.prolist.highHeeledData,
-      weddingDressData: state => state.prolist.weddingDressData,
-      necklaceData: state => state.prolist.necklaceData,
+      proList: state => state.prolist.proList,
+      // lipstickData: state => state.prolist.lipstickData,
+      // femaleBagData: state => state.prolist.femaleBagData,
+      // highHeeledData: state => state.prolist.highHeeledData,
+      // weddingDressData: state => state.prolist.weddingDressData,
+      // necklaceData: state => state.prolist.necklaceData,
     }),
   },
 };
