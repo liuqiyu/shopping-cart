@@ -50,7 +50,13 @@ shopping-cart
 
 ```
 
-### 浏览地址
+### 浏览
+
+* 效果
+
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/confirm1.png" width="365" height="619"/>
+
+* 地址
 
 [预览](https://liuqiyu.github.io/shopping-cart/dist/#/)
 
