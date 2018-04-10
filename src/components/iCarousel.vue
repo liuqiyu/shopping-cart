@@ -34,7 +34,7 @@ export default {
     },
     speed: {
       type: Number,
-      default: 3000,
+      default: 4000,
     },
   },
 };
