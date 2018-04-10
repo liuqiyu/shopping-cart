@@ -52,7 +52,7 @@ shopping-cart
 
 ### 浏览
 
-* 效果
+* 效果 [录制工具-- ScreenToGif]
 
 <img src="https://github.com/liuqiyu/shopping-cart/blob/master/blog/show-1.gif" width="965"/>
 
