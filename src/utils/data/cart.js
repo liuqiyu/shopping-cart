@@ -1,3 +1,11 @@
+/**
+ *  返回商品数据
+ *  如果`cartData`为空，则直接返回空数组
+ *  反之返回商品列表、商品数量、总金额
+ *
+ * @returns {*}
+ */
+
 const setClassCart = () => {
   let cartData = [];
   let typeArr = [];

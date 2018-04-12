@@ -199,7 +199,7 @@ export default {
                   float: left;
                   width: 50px;
                   height: 50px;
-                  background: red;
+                  background: #f1f1f1;
                   img {
                     width: 100%;
                     vertical-align: middle;

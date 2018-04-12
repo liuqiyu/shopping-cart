@@ -19,7 +19,7 @@ const addCart = async ({ commit }, val) => {
       arrId.push(item.id);
       // 属于重复商品，追加数量即可
       if (item.id === value.id) {
-        cartData[index].number += 1;
+        cartData[index].number += value.number;
       }
     });
     // -> 不是重复商品，直接追加
@@ -31,7 +31,11 @@ const addCart = async ({ commit }, val) => {
   } else {
     // 购物车原本无商品
     cartData = [value];
-    cartData[0].number = 1;
+    if (value.number) {
+      cartData[0].number = value.number;
+    } else {
+      cartData[0].number = 1;
+    }
     sessionStorage.setItem('cartData', JSON.stringify(cartData));
   }
   const data = await setClassCart();

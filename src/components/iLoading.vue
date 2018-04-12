@@ -1,5 +1,5 @@
 <template>
-  <div class="i-loading" v-if="showLoading">
+  <div class="i-loading" v-if="showLoading" :style="{height: height +'px'}">
     <Spin fix>
       <Icon type="load-c" size=48 class="demo-spin-icon-load"></Icon>
       <div class="loading-text">Loading</div>
@@ -11,6 +11,9 @@
 export default {
   props: {
     showLoading: true,
+    height: {
+      default: 200,
+    },
   },
 };
 </script>
@@ -19,7 +22,6 @@ export default {
   .i-loading {
     position: absolute;
     width: 100%;
-    height: 500px;
     z-index: 99;
     .loading-text {
       font-size: 16px;

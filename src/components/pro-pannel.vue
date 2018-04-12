@@ -1,16 +1,15 @@
 <template>
-  <div class="common-width">
-    <section class="pro-pannel" v-for="(item, index) in data" :key="index">
+  <section class="pro-pannel" v-if="showPannel">
       <header>
-        <p class="title">{{item.title}}</p>
+        <p class="title">{{data.title}}</p>
       </header>
       <div class="pro-body clearfix">
         <div class="big-banner">
-          <img :src="item.bannerUrl" alt="">
+          <img :src="data.bannerUrl" alt="">
         </div>
         <div class="column clearfix">
           <div class="column-item"
-               v-for="(cell, key) in item.list"
+               v-for="(cell, key) in data.list"
                :key="key" @click="addCart(cell)">
             <div class="img">
               <img v-lazy="cell.url" :alt="cell.name">
@@ -23,7 +22,6 @@
         </div>
       </div>
     </section>
-  </div>
 </template>
 
 <script>
@@ -32,13 +30,23 @@ import { mapActions } from 'vuex';
 export default {
   props: {
     data: {
-      type: Array,
+      type: Object,
     },
+    showPannel: true,
   },
   methods: {
     ...mapActions([
       'addCart',
     ]),
+    showDetails(item) {
+      this.$router.push({
+        path: '/details',
+        query: {
+          type: item.type,
+          id: item.id,
+        },
+      });
+    },
   },
 };
 </script>

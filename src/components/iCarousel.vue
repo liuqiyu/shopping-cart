@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <iLoading :showLoading="showLoading"></iLoading>
+    <iLoading :showLoading="showLoading" :height="height"></iLoading>
     <Carousel
       :autoplay="autoplay"
       :loop="loop"

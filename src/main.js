@@ -19,6 +19,15 @@ Vue.use(VueLazyload, {
   attempt: 1,
 });
 
+router.beforeEach((to, from, next) => {
+  iView.LoadingBar.start();
+  next();
+});
+
+router.afterEach(() => {
+  iView.LoadingBar.finish();
+});
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

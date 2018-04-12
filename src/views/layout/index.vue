@@ -4,6 +4,7 @@
     <router-view></router-view>
     <GlobalToolbar :innerHeight="innerHeight"></GlobalToolbar>
     <BackTop :right="50"></BackTop>
+    <loginModal></loginModal>
   </div>
 </template>
 
@@ -11,15 +12,18 @@
 import { mapActions } from 'vuex';
 import IHeader from '../../components/iTopbar';
 import GlobalToolbar from '../../components/global-toolbar';
+import loginModal from './loginModal';
 
 export default {
   components: {
     IHeader,
     GlobalToolbar,
+    loginModal,
   },
   created() {
-    this.getInnerWidth();
+    this.getInnerHeight();
     this.defaultCart();
+    this.defaultLoginStatus();
   },
   computed: {
     innerHeight() {
@@ -28,8 +32,9 @@ export default {
   },
   methods: {
     ...mapActions([
-      'getInnerWidth',
+      'getInnerHeight',
       'defaultCart',
+      'defaultLoginStatus',
     ]),
   },
 };

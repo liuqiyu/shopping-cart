@@ -7,7 +7,7 @@
       </div>
       <div class="i-search-wrapper">
         <i-input size="large" v-model="keyword" class="m-input">
-          <Button slot="append">搜索</Button>
+          <Button slot="append" @click="onSearch">搜索</Button>
         </i-input>
       </div>
     </div>
@@ -18,8 +18,13 @@
 export default {
   data() {
     return {
-      keyword: '内衣，内裤',
+      keyword: '口红，女包，高跟鞋，婚纱，项链',
     };
+  },
+  methods: {
+    onSearch() {
+      this.$Message.info('已显示全部数据');
+    },
   },
 };
 

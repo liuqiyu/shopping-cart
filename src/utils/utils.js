@@ -84,6 +84,7 @@ const removeHidden = () => {
   })
 }
 
+
 export {
   hasClass,
   toPoint,
