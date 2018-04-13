@@ -9,7 +9,9 @@
     <div class="i-cart-wrap">
       <div class="i-cart-top">
         <h3>我的购物车</h3>
-        <span class="close"><Icon type="ios-close-outline" size="20"></Icon></span>
+        <span class="close" @click="controlCart('close')">
+          <Icon type="ios-close-outline" size="20"></Icon>
+        </span>
       </div>
       <div class="i-cart-list-wrap">
         <div class="i-cart-list-row">
@@ -92,8 +94,12 @@ export default {
       'deleteCart',
     ]),
     // Mini版购物车的控制
-    controlCart() {
-      miniCartControl();
+    controlCart(status) {
+      if (status === 'close') {
+        miniCartControl(status);
+      } else {
+        miniCartControl();
+      }
     },
   },
 };
