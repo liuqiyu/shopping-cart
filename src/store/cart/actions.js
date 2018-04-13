@@ -12,7 +12,7 @@ const cartDataFuc = (val, type) => {
   let cartData = [];
   const arrId = [];
   const value = val;
-  if (JSON.parse(sessionStorage.getItem('cartData')).length > 0) {
+  if ((sessionStorage.getItem('cartData')) && JSON.parse(sessionStorage.getItem('cartData')).length > 0) {
     // 购物车原本就有商品
     cartData = JSON.parse(sessionStorage.getItem('cartData'));
     cartData.forEach((item, index) => {

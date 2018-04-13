@@ -18,6 +18,7 @@ import { miniCartControl } from './../../utils/miniCart';
 export default {
   watch: {
     '$route'() {
+      this.loading();
       miniCartControl('close');
     },
   },
@@ -27,6 +28,7 @@ export default {
     loginModal,
   },
   created() {
+    this.loading();
     this.getInnerHeight();
     this.defaultCart();
     this.defaultLoginStatus();
@@ -42,6 +44,12 @@ export default {
       'defaultCart',
       'defaultLoginStatus',
     ]),
+    loading() {
+      this.$Loading.start()
+      setTimeout(() => {
+        this.$Loading.finish()
+      });
+    },
   },
 };
 </script>
