@@ -18,6 +18,7 @@ ul,li {
 
 // 公有变量
 @common-width: 1200px; // 公有宽度
+@common-width-mini: 1000px; // 公有宽度
 @main-color: #FF0036;  // 公有颜色
 
 // 清除浮动
@@ -29,6 +30,12 @@ ul,li {
 .common-width {
   position: relative;
   width: @common-width;
+  margin: 0 auto;
+}
+
+.common-width-mini {
+  position: relative;
+  width: @common-width-mini;
   margin: 0 auto;
 }
 

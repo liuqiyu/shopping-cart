@@ -12,6 +12,17 @@ const state = {
         title: '烈艳蓝金唇膏',
         tags: '滋润 保湿 防水',
         price: '299',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-3.jpg',
+          },
+        ],
       },
       {
         id: '2',
@@ -21,6 +32,17 @@ const state = {
         title: '炫亮魅力唇膏',
         tags: '美美滋润轻盈如丝多色',
         price: '299',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-3.jpg',
+          },
+        ],
       },
       {
         id: '3',
@@ -30,6 +52,17 @@ const state = {
         title: '倾慕唇膏魅色系列',
         tags: '光感显色科技 双唇浓郁饱满 保色',
         price: '270',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-3.jpg',
+          },
+        ],
       },
       {
         id: '4',
@@ -39,6 +72,17 @@ const state = {
         title: '迪奥粉漾诱惑变色润唇膏',
         tags: '变色口红 3.5g',
         price: '299',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-3.jpg',
+          },
+        ],
       },
       {
         id: '5',
@@ -48,6 +92,17 @@ const state = {
         title: '雅诗兰黛倾慕唇膏-丝绒系列',
         tags: '气质哑光 柔滑质感 保湿',
         price: '270',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-3.jpg',
+          },
+        ],
       },
       {
         id: '6',
@@ -57,6 +112,17 @@ const state = {
         title: '菁纯柔润丝缎唇膏',
         tags: '柔滑丝润 妆效持久',
         price: '270',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-3.jpg',
+          },
+        ],
       },
       {
         id: '7',
@@ -66,6 +132,17 @@ const state = {
         title: '粉漾诱惑润唇膏',
         tags: '滋润,保湿,持久,易上色,不易脱色',
         price: '209',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-3.jpg',
+          },
+        ],
       },
       {
         id: '8',
@@ -75,6 +152,17 @@ const state = {
         title: ' 金致胶原美芯唇膏',
         tags: '补湿滋润',
         price: '109',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/lipstick-mini-list/kouhong-list-3.jpg',
+          },
+        ],
       },
     ],
   },
@@ -90,6 +178,17 @@ const state = {
         title: '',
         tags: '',
         price: '289',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '12',
@@ -99,6 +198,17 @@ const state = {
         title: '',
         tags: '',
         price: '218',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '13',
@@ -108,6 +218,17 @@ const state = {
         title: '女士PVC小号手',
         tags: '',
         price: '1298',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '14',
@@ -117,6 +238,17 @@ const state = {
         title: '单肩包',
         tags: 'CK2-20670',
         price: '399',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '15',
@@ -126,6 +258,17 @@ const state = {
         title: '',
         tags: '',
         price: '279',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '16',
@@ -135,6 +278,17 @@ const state = {
         title: '女士牛皮小号',
         tags: '',
         price: '1058',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '17',
@@ -144,6 +298,17 @@ const state = {
         title: '',
         tags: '',
         price: '249',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '18',
@@ -153,6 +318,17 @@ const state = {
         title: ' ',
         tags: '',
         price: '179',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/package-mini-list/package-mini-3.jpg',
+          },
+        ],
       },
     ],
   },
@@ -168,6 +344,17 @@ const state = {
         title: '春季单鞋女',
         tags: 'CK1-603',
         price: '339',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '22',
@@ -177,6 +364,17 @@ const state = {
         title: '凉鞋',
         tags: 'CK1-60361072',
         price: '399',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '23',
@@ -186,6 +384,17 @@ const state = {
         title: '2018春季新款休闲鞋',
         tags: '厚底小白',
         price: '199',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '24',
@@ -195,6 +404,17 @@ const state = {
         title: '优雅蕾丝性感尖头浅口高跟鞋',
         tags: '',
         price: '159',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '25',
@@ -204,6 +424,17 @@ const state = {
         title: '春夏羊皮尖头浅口细跟',
         tags: '高跟鞋',
         price: '299',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '26',
@@ -213,6 +444,17 @@ const state = {
         title: '春季粗跟真皮浅口圆头',
         tags: '高跟鞋',
         price: '550',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '27',
@@ -222,6 +464,17 @@ const state = {
         title: '夏季超高跟坡跟凉鞋',
         tags: '',
         price: '199',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-3.jpg',
+          },
+        ],
       },
       {
         id: '28',
@@ -231,6 +484,17 @@ const state = {
         title: '夏季粗跟高跟凉鞋',
         tags: '',
         price: '199',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/highHeeled-mini-list/highHeeled-mini-3.jpg',
+          },
+        ],
       },
     ],
   },
@@ -246,6 +510,17 @@ const state = {
         title: '',
         tags: '',
         price: '1898',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '32',
@@ -255,6 +530,17 @@ const state = {
         title: '',
         tags: '',
         price: '898',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '33',
@@ -264,6 +550,17 @@ const state = {
         title: '',
         tags: '',
         price: '1585',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '34',
@@ -273,6 +570,17 @@ const state = {
         title: '',
         tags: '',
         price: '1578.27',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '35',
@@ -282,6 +590,17 @@ const state = {
         title: '',
         tags: '',
         price: '1889',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '36',
@@ -291,6 +610,17 @@ const state = {
         title: '',
         tags: '',
         price: '1782',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '37',
@@ -300,6 +630,17 @@ const state = {
         title: '',
         tags: '',
         price: '386',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '38',
@@ -309,6 +650,17 @@ const state = {
         title: '',
         tags: '',
         price: '598',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/weddingDress-mini-list/3.jpg',
+          },
+        ],
       },
     ],
   },
@@ -324,6 +676,17 @@ const state = {
         title: '女士恶魔之眼项链',
         tags: '',
         price: '539',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '42',
@@ -333,6 +696,17 @@ const state = {
         title: '施华洛世奇',
         tags: 'CK1- 女士S',
         price: '499',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '43',
@@ -342,6 +716,17 @@ const state = {
         title: '浪漫项链锁骨',
         tags: '',
         price: '1290',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '44',
@@ -351,6 +736,17 @@ const state = {
         title: '',
         tags: '',
         price: '990',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '45',
@@ -360,6 +756,17 @@ const state = {
         title: '',
         tags: '',
         price: '495',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '46',
@@ -369,6 +776,17 @@ const state = {
         title: '',
         tags: '',
         price: '158',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '47',
@@ -378,6 +796,17 @@ const state = {
         title: '',
         tags: '',
         price: '79',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/3.jpg',
+          },
+        ],
       },
       {
         id: '48',
@@ -387,6 +816,17 @@ const state = {
         title: '',
         tags: '',
         price: '128',
+        miniList: [
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/1.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/2.jpg',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/necklace-mini-list/3.jpg',
+          },
+        ],
       },
     ],
   },
@@ -814,6 +1254,7 @@ const state = {
       imageUrl: 'https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/static/images/main-banner/5.jpg',
     },
   ],
+  // 猜你喜欢
   uLikeList: [
     {
       id: '1',

@@ -4,22 +4,19 @@
       <div class="d-banner">
         <img src="./banner.jpg" alt="">
       </div>
-      <div class="common-width">
+      <div class="common-width-mini">
         <div class="main-details clearfix">
           <!-- 效果图 -->
           <div class="d-album">
             <div class="d-img">
-              <img :src="proDetails.url" alt="">
+              <img :src="bigBanner" alt="">
             </div>
             <div class="d-mini-img">
-              <div class="mini-img-item">
-                <img :src="proDetails.url" alt="">
-              </div>
-              <div class="mini-img-item">
-                <img :src="proDetails.url" alt="">
-              </div>
-              <div class="mini-img-item">
-                <img :src="proDetails.url" alt="">
+              <div class="mini-img-item"
+                   v-for="(item, index) in proDetails.miniList"
+                   :key="index" @mouseenter="hover(item)">
+                <img :src="item.url"
+                     alt="">
               </div>
             </div>
           </div>
@@ -62,15 +59,31 @@
               </span>
             </div>
           </div>
-          <div class="d-same"></div>
+        </div>
+        <div class="d-box">
+          <Tabs>
+            <TabPane label="图片" icon="images">
+              <div class="tab-img">图片1</div>
+              <div class="tab-img">图片2</div>
+              <div class="tab-img">图片3</div>
+            </TabPane>
+            <TabPane label="详情" icon="ios-list-outline">
+              <div class="tab-img">详情1</div>
+              <div class="tab-img">详情2</div>
+              <div class="tab-img">详情3</div>
+            </TabPane>
+          </Tabs>
         </div>
       </div>
+      <!-- 底部 -->
+      <iFooter></iFooter>
     </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
 import background from './../../mixin/background';
+import iFooter from './../../components/iFooter';
 
 export default {
   mixins: [background],
@@ -96,7 +109,11 @@ export default {
   data() {
     return {
       proDetails: null,
+      bigBanner: null,
     };
+  },
+  components: {
+    iFooter,
   },
   created() {
     this.getProItems();
@@ -109,6 +126,7 @@ export default {
       this.proData.list.forEach((item) => {
         if (this.$route.query.id === item.id) {
           this.proDetails = item;
+          this.bigBanner = item.url;
           this.$set(this.proDetails, 'number', 1);
         }
       });
@@ -123,6 +141,9 @@ export default {
     // 减少
     reduceNum() {
       this.proDetails.number -= 1;
+    },
+    hover(item) {
+      this.bigBanner = item.url;
     },
   },
 };
@@ -177,7 +198,7 @@ export default {
       float: left;
       width: 560px;
       background: #fff;
-      margin-left: 20px;
+      margin-left: 30px;
       height: 400px;
       border-right: 1px solid #eee;
       padding-right: 20px;
@@ -281,13 +302,23 @@ export default {
         }
       }
     }
-    // 其他相似的商品
-    .d-same {
-      float: left;
-      width: 230px;
-      height: 400px;
-      background: red;
-      margin-left: 30px;
+  }
+
+  // d-box
+  .d-box {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    .tab-img {
+      width: 100%;
+      height: 200px;
+      background: #eee;
+      margin-bottom: 20px;
+      text-align: center;
+      line-height: 200px;
+      font-size: 18px;
+      color: #fff;
     }
   }
 </style>
