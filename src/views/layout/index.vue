@@ -13,8 +13,14 @@ import { mapActions } from 'vuex';
 import IHeader from '../../components/iTopbar';
 import GlobalToolbar from '../../components/global-toolbar';
 import loginModal from './loginModal';
+import { miniCartControl } from './../../utils/miniCart';
 
 export default {
+  watch: {
+    '$route'() {
+      miniCartControl('close');
+    },
+  },
   components: {
     IHeader,
     GlobalToolbar,

@@ -8,7 +8,8 @@
     </div>
     <div class="i-cart-wrap">
       <div class="i-cart-top">
-        全屏查看
+        <h3>我的购物车</h3>
+        <span class="close"><Icon type="ios-close-outline" size="20"></Icon></span>
       </div>
       <div class="i-cart-list-wrap">
         <div class="i-cart-list-row">
@@ -34,7 +35,7 @@
                     <Icon type="android-remove-circle"></Icon>
                   </span>
                   <span class="number">{{cell.number}}</span>
-                  <span class="add" @click="addCart(cell)">
+                  <span class="add" @click="addCartDefault(cell)">
                     <Icon type="android-add-circle"></Icon>
                   </span>
                 </div>
@@ -71,7 +72,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import { hasClass } from './../utils/utils';
+import { miniCartControl } from './../utils/miniCart';
 
 export default {
   props: {
@@ -86,18 +87,13 @@ export default {
   },
   methods: {
     ...mapActions([
-      'addCart',
+      'addCartDefault',
       'reduceCart',
       'deleteCart',
     ]),
     // Mini版购物车的控制
     controlCart() {
-      const toolbar = document.querySelector('.i-global-toolbar');
-      if (hasClass(toolbar, 'open')) {
-        toolbar.classList.remove('open');
-      } else {
-        toolbar.classList.add('open');
-      }
+      miniCartControl();
     },
   },
 };
@@ -161,6 +157,20 @@ export default {
         line-height: 28px;
         background: #e6e6e6;
         padding: 0 10px;
+        .close {
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          line-height: 20px;
+          display: block;
+          position: absolute;
+          right: 8px;
+          top: 4px;
+          cursor: pointer;
+          &:hover {
+            color: @main-color;
+          }
+        }
       }
       .i-cart-list-wrap {
         padding: 29px 0 85px 0;
@@ -241,7 +251,7 @@ export default {
                     color: rgba(0,0,0,.1);
                   }
                   .number {
-                    padding: 0 3px;
+                    text-align: center;
                     vertical-align: top;
                   }
                 }

@@ -7,19 +7,24 @@ const defaultCart = async ({ commit }) => {
   commit(SET_CART, cartData);
 };
 
-// 加入购物车
-const addCart = async ({ commit }, val) => {
+// 加入购物车 -- 操作
+const cartDataFuc = (val, type) => {
   let cartData = [];
   const arrId = [];
   const value = val;
-  if (sessionStorage.getItem('cartData')) {
+  if (JSON.parse(sessionStorage.getItem('cartData')).length > 0) {
     // 购物车原本就有商品
     cartData = JSON.parse(sessionStorage.getItem('cartData'));
     cartData.forEach((item, index) => {
       arrId.push(item.id);
       // 属于重复商品，追加数量即可
       if (item.id === value.id) {
-        cartData[index].number += value.number;
+        // cartData[index].number += 1;
+        if (type === 'default') {
+          cartData[index].number += 1;
+        } else {
+          cartData[index].number += val.number;
+        }
       }
     });
     // -> 不是重复商品，直接追加
@@ -38,6 +43,18 @@ const addCart = async ({ commit }, val) => {
     }
     sessionStorage.setItem('cartData', JSON.stringify(cartData));
   }
+};
+
+// 加入购物车 默认加1
+const addCartDefault = async ({ commit }, val) => {
+  cartDataFuc(val, 'default');
+  const data = await setClassCart();
+  commit(SET_CART, data);
+};
+
+// 加入购物车
+const addCart = async ({ commit }, val) => {
+  cartDataFuc(val);
   const data = await setClassCart();
   commit(SET_CART, data);
 };
@@ -72,6 +89,7 @@ const deleteCart = async ({ commit }, value) => {
 };
 
 export default {
+  addCartDefault,
   addCart,
   reduceCart,
   deleteCart,

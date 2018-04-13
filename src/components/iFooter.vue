@@ -9,7 +9,7 @@
       </div>
       <div class="i-copyright">
         <div class="common-width">
-          <span class="copyright">© 2008-2018 belle-go.COM 版权所有</span>
+          <span class="copyright">© 2008-2018 liuqiyu 版权所有</span>
           <span class="contact">联系方式（QQ）：1064839051 </span>
         </div>
       </div>
