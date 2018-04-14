@@ -29,7 +29,11 @@ const cartDataFuc = (val, type) => {
     });
     // -> 不是重复商品，直接追加
     if (arrId.indexOf(value.id) < 0) {
-      value.number = 1;
+      if (type === 'default') {
+        value.number = 1;
+      } else {
+        value.number = val.number;
+      }
       cartData.push(value);
     }
     sessionStorage.setItem('cartData', JSON.stringify(cartData));
