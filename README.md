@@ -2,7 +2,6 @@
   <img src="https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/blog/logo.png"/>
 </p>
 
-
 ## 前言
 
 `Belle go`是一个电商网站【声明：部分功能仿照天猫】。前端采用vue为基础搭建的框架。对于vue初学者来说，这是一个不错的学习实例。本项目使用了`vue`全家桶（`vue + vue-router + vuex`）,如何使用路由，如何管理状态。本项目都会涉及。当我们了解了`Vue`以及周边的插件。便需要去考虑优化的东西了。记得第一次使用vue打包出一个巨大的怪物老板大发雷霆的模样。。。之后就使用路由懒加载，按需引入对应的`js`，避免文件过大导致页面加载过慢。
