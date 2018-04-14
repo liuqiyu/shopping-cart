@@ -1,6 +1,13 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/liuqiyu/shopping-cart/master/blog/logo.png"/>
 </p>
+[![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
+[![Codacy badge][codacy-image]][codacy-url]
+[![Downloads][downloads-image]][npm-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/hax/mmclass.svg)](https://greenkeeper.io/)
+
 
 
 ## 前言
