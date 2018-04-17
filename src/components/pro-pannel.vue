@@ -10,7 +10,7 @@
         <div class="column clearfix">
           <div class="column-item"
                v-for="(cell, key) in data.list"
-               :key="key" @click="addCart(cell)">
+               :key="key" @click="toDetails(cell)">
             <div class="img">
               <img v-lazy="cell.url" :alt="cell.name">
             </div>
@@ -18,6 +18,7 @@
               <p class="describe">{{cell.brandName}} {{cell.title}} {{cell.tags}}</p>
               <p class="price">￥{{cell.price}}</p>
             </div>
+            <div class="buy" @click.stop="addCartLint(cell)">加入购物车</div>
           </div>
         </div>
       </div>
@@ -26,6 +27,7 @@
 
 <script>
 import { mapActions } from 'vuex';
+import { miniCartControl } from './../utils/miniCart';
 
 export default {
   props: {
@@ -38,7 +40,7 @@ export default {
     ...mapActions([
       'addCart',
     ]),
-    showDetails(item) {
+    toDetails(item) {
       this.$router.push({
         path: '/details',
         query: {
@@ -46,6 +48,10 @@ export default {
           id: item.id,
         },
       });
+    },
+    addCartLint(item) {
+      this.addCart(item);
+      miniCartControl('open');
     },
   },
 };
@@ -101,6 +107,8 @@ export default {
         width: 972px;
         float: left;
         .column-item {
+          overflow: hidden;
+          position: relative;
           width: 228px;
           height: 290px;
           border: 1px solid #fff;
@@ -114,6 +122,9 @@ export default {
             border-color: @main-color;
             .img img {
               opacity: 0.8;
+            }
+            .buy {
+              bottom: 0;
             }
           }
           .img {
@@ -140,6 +151,19 @@ export default {
               color: @main-color;
               font-weight: bolder;
             }
+          }
+          .buy {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: rgba(0,0,0,.7);
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
           }
         }
       }

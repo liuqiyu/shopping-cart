@@ -29,7 +29,7 @@ const cartDataFuc = (val, type) => {
     });
     // -> 不是重复商品，直接追加
     if (arrId.indexOf(value.id) < 0) {
-      if (type === 'default') {
+      if (type === 'default' || !val.number) {
         value.number = 1;
       } else {
         value.number = val.number;

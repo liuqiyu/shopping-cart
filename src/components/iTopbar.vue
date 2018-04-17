@@ -2,7 +2,7 @@
   <div class="i-top-bar">
     <div class="common-width clearfix">
       <div class="left">
-        <span>嗨，欢迎来百丽购</span>
+        <span>嗨，欢迎来 <span @click="goHome" class="title">百丽购</span></span>
         <span v-if="!userInfo" class="please-login" @click="openModal">请登录</span>
         <span v-else>
           <span class="username">&nbsp;&nbsp;{{userInfo.user}}</span>
@@ -61,6 +61,11 @@ export default {
         this.logouting();
       }, 1000);
     },
+    goHome() {
+      this.$router.push({
+        path: '/',
+      });
+    },
   },
 };
 </script>
@@ -85,6 +90,9 @@ export default {
             color: @main-color;
             text-decoration: underline;
           }
+        }
+        .title {
+          cursor: pointer;
         }
         .username {
           margin: 0 5px;

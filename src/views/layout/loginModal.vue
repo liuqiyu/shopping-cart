@@ -35,6 +35,7 @@
 
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex';
+import oauth from './../../api/oauth';
 
 export default {
   data() {
@@ -71,12 +72,23 @@ export default {
       this.$refs[name].validate((valid) => {
         if (valid) {
           this.modal_loading = true;
-          setTimeout(() => {
-            this.modal_loading = false;
-            this.logining(this.formInline);
-            this.LOGIN_MODAL_STATUS(false);
-            this.$Message.success('登陆成功');
-          }, 2000);
+          // setTimeout(() => {
+          //   this.modal_loading = false;
+          //   this.logining(this.formInline);
+          //   this.LOGIN_MODAL_STATUS(false);
+          //   this.$Message.success('登陆成功');
+          // }, 2000);
+          location.href = 'https://github.com/login/oauth/authorize?client_id=31dd281011969c0b33fc&scope=liuqiyu:1064839051@qq.com';
+          // oauth.authorize('31dd281011969c0b33fc', 'liuqiyu:1064839051@qq.com').then((res) => {
+          //   console.log(res);
+          // });
+          // axios.get('https://github.com/login/oauth/authorize?client_id=31dd281011969c0b33fc&scope=liuqiyu:1064839051@qq.com')
+          //   .then((response) => {
+          //     console.log(response);
+          //   })
+          //   .catch((error) => {
+          //     console.log(error);
+          //   })
         }
       });
     },
